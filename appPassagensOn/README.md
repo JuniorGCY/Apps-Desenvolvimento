@@ -31,13 +31,13 @@ Aplicativo desenvolvido com React Native focado na visualização de promoções
 
 ## 🗂 Organização
 
-- 🎨 Protótipos no Figma (em breve)
-- 🔧 Tarefas organizadas via Trello (em breve)
+- 🎨 Protótipos no Figma: https://www.figma.com/design/KOEdw3qwqvsPHJ9kzmLr94/appPassagens?node-id=0-1&t=b8CqzL8egaInsG2i-1
+- 🔧 Tarefas organizadas via Trello: https://trello.com/invite/b/68437d11a6d3474c8d9f15e2/ATTI6111a4d3b56d01971ce3096fec938eb9219BF494/apppassagenson
 
 ## 📦 Instalação local
 
 ```bash
-git clone https://github.com/JuniorGCY/app-passagens.git
+git clone https://github.com/JuniorGCY/appPassagensOn.git
 cd app-passagens
 npm install
 npx react-native run-android
