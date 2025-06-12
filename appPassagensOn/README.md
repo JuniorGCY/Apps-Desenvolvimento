@@ -1,6 +1,6 @@
-# ✈️ App Passagens
+# ✈️ App Passagens (entrando em fase de desenvolvimento)
 
-Aplicativo desenvolvido com React Native focado na visualização de promoções de voos, autenticação de usuários e reserva de passagens.
+Aplicativo planejado com React Native focado na visualização de promoções de voos, autenticação de usuários e reserva de passagens.
 
 ## 🚀 Tecnologias utilizadas
 
