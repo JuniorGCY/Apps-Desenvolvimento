@@ -44,7 +44,7 @@ Você pode instalar o APK direto no Android:
 
 ## 📸 Demonstração
 
-| Tela Inicial | Chat Jurídico | Contatos de Emergência |
+| Tela Inicial | Chat Jurídico | Apoio Psicológico |
 |---------------|--------------------|--------------------------|
 | ![Tela Inicial](./screenshots/home.jpg) | ![Direitos](./screenshots/chatjuridico.jpg) | ![Emergência](./screenshots/apoiopsicologico.jpg) |
 
