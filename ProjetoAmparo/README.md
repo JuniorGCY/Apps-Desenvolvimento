@@ -46,8 +46,8 @@ Você pode instalar o APK direto no Android:
 
 | Tela Inicial | Chat Jurídico | Contatos de Emergência |
 |---------------|--------------------|--------------------------|
-| ![Tela Inicial](./screenshots/home.png) | ![Direitos](./screenshots/chatjuridico.png) | ![Emergência](./screenshots/apoiopsicologico.png) |
+| ![Tela Inicial](./screenshots/home.jpg) | ![Direitos](./screenshots/chatjuridico.jpg) | ![Emergência](./screenshots/apoiopsicologico.jpg) |
 
- **Acompanhe a iniciativa Amparo ->** (https://linktr.ee/amparoofc?fbclid=PAZXh0bgNhZW0CMTEAAacRpK_nTAC1_9dZA5MQNfFDPutoSjCGjNwSjlbeKW5mkeIFCtjFOXTwSscjhw_aem_C_V0zv7Um-dMZcCxR9CZDw)
+ [**Acompanhe a iniciativa Amparo**](https://linktr.ee/amparoofc?fbclid=PAZXh0bgNhZW0CMTEAAacRpK_nTAC1_9dZA5MQNfFDPutoSjCGjNwSjlbeKW5mkeIFCtjFOXTwSscjhw_aem_C_V0zv7Um-dMZcCxR9CZDw)
 
 
