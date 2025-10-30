@@ -5,5 +5,5 @@ ReadMe geral, cada app tem seu próprio ReadMe especificando tudo
 
 ## Apps em desenvolvimento
 
--AppPassagensOn - App de passagens com Firebase.
+-Projeto Amparo: um aplicativo com o objetivo de ajudar mulheres vitimas de violência. Com informações úteis e atualizadas para muitos casos e funções como: Gravar aúdio, procurar delegacias, contatos confiáveis e muito mais.
 
