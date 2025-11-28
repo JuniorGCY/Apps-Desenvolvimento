@@ -26,18 +26,15 @@ Criar um espaço seguro e acessível para que mulheres possam:
 
 ## 🧩 Tecnologias usadas
 
-| Categoria | Ferramenta |
-
-| Framework | [React Native] |
-| SDK | [Expo] |
-| Build | [EAS Build] |
+| React Native | SQLite |
+| Expo | OpenAI API |
 
 ## 📦 Download do App
 
 Esta versão foi criada com **EAS Build (Dev Client)** — não depende do Expo Go.  
-Você pode instalar o APK direto no Android:
+Você pode instalar o APK direto no Android após extrair:
 
-[📥 **Baixar APK (EAS Build)**](https://expo.dev/accounts/yashimayu/projects/ProjetoAmparo/builds/a05bb379-3679-43b8-935f-93a40254bffe)
+[📥 **Baixar APK (EAS Build)**](https://expo.dev/artifacts/eas/cbqbz5XnT4HACrVJuBaG6B.tar.gz)
 
 > Compatível com Android **7.0 (Nougat)** ou superior. 
 > Versão: *Preview – em desenvolvimento.*

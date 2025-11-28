@@ -4,6 +4,8 @@ import {MaterialCommunityIcons} from '@expo/vector-icons'
 import { DrawerActions } from "@react-navigation/native";
 import colors from "../styles/colors";
 
+import { RFValue } from "react-native-responsive-fontsize";
+
 import ModalContentPsi1 from './ModalContentPsi1'
 import ModalContentPsi2 from './ModalContentPsi2'
 import ModalContentPsi3 from './ModalContentPsi3'
@@ -33,54 +35,54 @@ export default function ApoioPsicoloico({navigation}) {
         <ScrollView style={styles.scrollView}>
              <View style={styles.header}>
                 <TouchableOpacity style={{marginStart: 20, marginEnd: 20}} onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
-                    <MaterialCommunityIcons name="menu" size={30} color='#AF28FF' />
+                    <MaterialCommunityIcons name="menu" size={RFValue(30)} color='#7B4DFA' />
                 </TouchableOpacity>
                         
-                <MaterialCommunityIcons name="heart" size={30} color='#AF28FF'/>
-                <Text style={{fontSize: 25,color: colors.primary, fontWeight: 'bold', marginStart: 15, textAlign: 'center'}}>Apoio Psicológico</Text>
+                <MaterialCommunityIcons name="heart" size={RFValue(26)} color='#7B4DFA'/>
+                <Text style={{fontSize: RFValue(20),color: '#7B4DFA', fontWeight: '900', marginStart: 15, textAlign: 'center'}}>Apoio Psicológico</Text>
             </View>
 
             <View style={styles.cardPesquisa}>
-                <Text style={{fontWeight: '900'}}>Encontre Apoio Psicológico</Text>
+                <Text style={{fontWeight: '900', textAlign: 'center', color: '#7B4DFA', marginTop: 5, marginBottom: 5}}>Encontre Apoio Psicológico</Text>
                 <TextInput 
                   placeholder="Buscar por serviços de apoio psicologico gratuitos e acessiveis em sua região"
-                  style={{borderWidth: 0.5, borderColor: '#000', borderRadius: 10}}/>
+                  placeholderTextColor='#222'
+                  style={{borderWidth: 1, borderColor: '#444', borderRadius: 10}}/>
             </View>
 
-            <Text style={{fontWeight: '900', fontSize: 16, marginTop: 30, marginStart: 20, alignItems: 'flex-start'}}>Apoio Profissional</Text>
+            <Text style={{fontWeight: '900', fontSize: RFValue(15), marginTop: 30, marginStart: 20, alignItems: 'flex-start', color: '#7B4DFA'}}>Apoio Profissional</Text>
 
-            <ScrollView horizontal style={{marginStart: 10}} showsHorizontalScrollIndicator={false}>
+            <ScrollView horizontal style={{margin: 10, padding: 5}} showsHorizontalScrollIndicator={false}>
                 <View style={styles.cardSuporteProfissional}>
                     <ScrollView nestedScrollEnabled={true} >
-                    <Text style={{fontWeight: '500', fontSize: 16, marginTop: 5}}>Centro de Valorização da Vida (CVV)</Text>
-                    <Text style={{fontWeight: '400', fontSize: 16, marginTop: 5, marginBottom: 10}}>Apoio emocional e prevenção do suicidio. Atendimento voluntário e gratuito</Text>
-
+                    <Text style={styles.cardTitleSuporte}>Centro de Valorização da Vida (CVV)</Text>
+                    <Text style={styles.cardSubtitleSuporte}>Apoio emocional e prevenção do suicidio. Atendimento voluntário e gratuito</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="phone" size={20} color='#252525ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 5}}>188</Text>
+                        <Text style={styles.cardTextSuporte}>188</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="clock-alert-outline" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>24 horas</Text>
+                        <Text style={styles.cardTextSuporte}>24 horas</Text>
                     </View>
                     
-                    <Text style={{fontWeight: '400', fontSize: 16, marginBottom: 10}}>Serviços oferecidos:</Text>
+                    <Text style={{fontWeight: '500', fontSize: RFValue(14), marginBottom: 10}}>Serviços oferecidos:</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Chat Online 7 dias</Text>
+                        <Text style={styles.cardTextSuporte}>Chat Online 7 dias</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Ligação 24 horas</Text>
+                        <Text style={styles.cardTextSuporte}>Ligação 24 horas</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Atendimento online e presencial</Text>
+                        <Text style={styles.cardTextSuporte}>Atendimento online e presencial</Text>
                     </View>
                     
                     <Text style={{backgroundColor: '#5fff59ff', color: '#000', fontWeight: '400', width: 140}}>Atendimento Gratuito</Text>
@@ -231,18 +233,18 @@ export default function ApoioPsicoloico({navigation}) {
             </ScrollView>
 
             <View style={styles.cardExercicios}>
-                <Text style={{fontSize: 14, color: '#ff3030ff', fontWeight: '900', margin: 10}}>Exercícios de Autocuidado</Text>
+                <Text style={{fontSize: RFValue(14), color: '#7B4DFA', fontWeight: '900', margin: 10}}>Exercícios de Autocuidado</Text>
 
                 <View style={{width: '100%', height: 1, backgroundColor: '#d3d3d3ff', marginBottom: 10}}></View>
 
                 <TouchableOpacity onPress={ () => handleModal('Content1')}>
                     <View style={styles.cardLite}>
-                    <Text style={{color: '#ff3030ff', fontWeight: '900', fontSize: 14}}>Respiração para Redução de Ansiedade</Text>
-                    <Text style={{fontSize: 12}}>Exercícios de Respiração profunda para acalmar o sistema nervoso em mom...</Text>
+                    <Text style={{color: '#7B4DFA', fontWeight: '800', fontSize: RFValue(10)}}>Respiração para Redução de Ansiedade</Text>
+                    <Text style={{fontSize: RFValue(9)}}>Exercícios de Respiração profunda para acalmar o sistema nervoso em mom...</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 10}}>
-                        <MaterialCommunityIcons name="clock" size={20} color='#000'/>
-                        <Text style={{marginStart: 10}}>5 Minutos</Text>
+                        <MaterialCommunityIcons name="clock" size={RFValue(16)} color='#000'/>
+                        <Text style={{marginStart: 10, fontSize: RFValue(11), fontWeight: '400'}}>5 Minutos</Text>
                     </View>
                 </View>
                 </TouchableOpacity>
@@ -251,12 +253,12 @@ export default function ApoioPsicoloico({navigation}) {
 
                 <TouchableOpacity onPress={ () => handleModal('Content2')}>
                     <View style={styles.cardLite}>
-                    <Text style={{color: '#ff3030ff', fontWeight: '900', fontSize: 14}}>Escaneamento Corporal para Redução de Estresse</Text>
-                    <Text style={{fontSize: 12}}>Técnica de atenção plena para reconectar com o corpo e reduzir tensões...</Text>
+                    <Text style={{color: '#7B4DFA', fontWeight: '800', fontSize: RFValue(10)}}>Escaneamento Corporal para Redução de Estresse</Text>
+                    <Text style={{fontSize: RFValue(9)}}>Técnica de atenção plena para reconectar com o corpo e reduzir tensões...</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 10}}>
-                        <MaterialCommunityIcons name="clock" size={20} color='#000'/>
-                        <Text style={{marginStart: 10}}>10-15 Minutos</Text>
+                        <MaterialCommunityIcons name="clock" size={RFValue(16)} color='#000'/>
+                        <Text style={{marginStart: 10, fontSize: RFValue(11), fontWeight: '400'}}>10-15 Minutos</Text>
                     </View>
                 </View>
                 </TouchableOpacity>
@@ -265,12 +267,12 @@ export default function ApoioPsicoloico({navigation}) {
 
                 <TouchableOpacity onPress={() => handleModal('Content3')}>
                     <View style={styles.cardLite}>
-                    <Text style={{color: '#ff3030ff', fontWeight: '900', fontSize: 14}}>Diário de Gratidão</Text>
-                    <Text style={{fontSize: 12}}>Prática de registro diário para reconhecer aspectos positivos mesmo em...</Text>
+                    <Text style={{color: '#7B4DFA', fontWeight: '800', fontSize: RFValue(10)}}>Diário de Gratidão</Text>
+                    <Text style={{fontSize: RFValue(9)}}>Prática de registro diário para reconhecer aspectos positivos mesmo em...</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 10}}>
-                        <MaterialCommunityIcons name="clock" size={20} color='#000'/>
-                        <Text style={{marginStart: 10}}>5 Minutos</Text>
+                        <MaterialCommunityIcons name="clock" size={RFValue(16)} color='#000'/>
+                        <Text style={{marginStart: 10, fontSize: RFValue(11), fontWeight: '400'}}>5 Minutos</Text>
                     </View>
                 </View>
                 </TouchableOpacity>
@@ -293,42 +295,21 @@ export default function ApoioPsicoloico({navigation}) {
             <ScrollView  style={styles.cardAutoCuidado}>
                 <View style={{flexDirection: 'column'}}>
                     <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>Cuide da Sua Saúde Mental</Text>
+                        <Text style={styles.cardtitle}>Cuide da Sua Saúde Mental</Text>
                     </View>
 
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                        <MaterialCommunityIcons name="check" size={20} color='#fff'/>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>Redução de sintomas de ansiedade e estresse</Text>
-                    </View>
-
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                        <MaterialCommunityIcons name="check" size={20} color='#fff'/>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>Maior clareza para tomar decisões</Text>
-                    </View>
-
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                        <MaterialCommunityIcons name="check" size={20} color='#fff'/>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>Fortalecimento da autoestima</Text>
-                    </View>
-
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                        <MaterialCommunityIcons name="check" size={20} color='#fff'/>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>Reconexão com seus valores e necessidades</Text>
-                    </View>
-
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                        <MaterialCommunityIcons name="check" size={20} color='#fff'/>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>Mantenha uma rotina de sono regular</Text>
-                    </View>
-
-                    <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                        <MaterialCommunityIcons name="check" size={20} color='#fff'/>
-                        <Text style={{color: '#fff', fontSize: 15, fontWeight: '900', margin: 10}}>• Evite isolamento social</Text>
-                    </View>
+                    {[
+                        "Redução de sintomas de ansiedade e estresse",
+                        "Maior clareza para tomar decisões",
+                        "Fortalecimento da autoestima",
+                        "Reconexão com seus valores e necessidades",
+                        "Mantenha uma rotina de sono regular",
+                        "Evite isolamento social"
+                    ].map((tip, index) => (
+                        <Text key={index} style={styles.cardSubTitle}>• {tip}</Text>
+                    ))}
                 </View>
-            </ScrollView>
-
-            
+            </ScrollView>           
         </ScrollView>
     )
 }
@@ -336,58 +317,63 @@ export default function ApoioPsicoloico({navigation}) {
 const styles = StyleSheet.create({
     scrollView: {
         flex: 1,
-        backgroundColor: '#FFEDF9'
+        backgroundColor: '#F9F9FB'
     },
     header: {
-        width: '100%',
-        height: 100,
-        paddingStart: 5,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        backgroundColor: colors.background,
-        borderBottomLeftRadius: 50,
-        borderWidth: 0.3,
-        borderColor: '#000',
-        elevation: 3
+        width: "100%",
+        maxHeight: 110,
+        minHeight: 100,
+        flexDirection: "row",
+        alignItems: "center",
+        paddingHorizontal: 10,
+        backgroundColor: "#fff",
+        elevation: 4,
+        borderBottomLeftRadius: 40,
     },
     cardPesquisa: {
-        width: 390, 
-        height: 'auto', 
+        maxWidth: '93%',
+        minWidth: '85%',
+        maxHeight: 110, 
+        minHeight: 90,
         padding: 10,
-        marginTop: 10,
-        alignSelf: 'center',
-        borderRadius: 10,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        borderWidth: 0.5,
-        borderColor: '#000',
-        elevation: 3
-    },
-    cardAutoCuidado: {
-        width: 'auto',
-        height: 'auto',
         marginTop: 20,
-        paddingLeft: 20,
         alignSelf: 'center',
-        backgroundColor: '#f827ffff',
-        borderRadius: 20,
+        backgroundColor: '#fff',
+        borderRadius: 12,
         borderWidth: 0.5,
-        borderColor: '#000',
-        elevation: 3
+        borderColor: '#eee',
+        elevation: 4
     },
     cardSuporteProfissional: {
-        width: 370,
-        height: 220,
+        maxWidth: RFValue(270),
+        minWidth: RFValue(200),
+        maxHeight: RFValue(220),
+        minHeight: RFValue(180),
         marginTop: 10,
-        marginEnd: 10,
+        marginHorizontal: 10,
         padding: 20,
         alignSelf: 'center',
         backgroundColor: '#fff',
-        borderRadius: 20,
-        borderWidth: 0.5,
-        borderColor: '#000',
-        elevation: 3
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: '#eee',
+        elevation: 4
+    },
+    cardTitleSuporte: {
+        fontWeight: '500', 
+        fontSize: RFValue(13), 
+        marginTop: 5
+    },
+    cardSubtitleSuporte: {
+        fontWeight: '400', 
+        fontSize: RFValue(12), 
+        marginTop: 5, 
+        marginBottom: 10
+    },
+    cardTextSuporte: {
+        fontSize: RFValue(10),
+        marginStart: 10, 
+        marginBottom: 5
     },
     cardLite: {
         width: 'auto', 
@@ -399,15 +385,44 @@ const styles = StyleSheet.create({
         borderRadius: 8
     },
     cardExercicios: {
-        width: 370,
-        height: 'auto',
+        maxWidth: '90%',
+        minWidth: '85%',
+        maxHeight: 400,
+        minHeight: 300,
         marginTop: 20,
         alignSelf: 'center',
         backgroundColor: '#fff',
-        borderRadius: 20,
-        borderWidth: 0.5,
-        borderColor: '#000000ff',
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: '#eee',
         elevation: 3
+    },
+    cardAutoCuidado: {
+        maxWidth: '90%',
+        minWidth: '80%',
+        maxHeight: 350,
+        minHeight: 240,
+        marginTop: 20,
+        marginBottom: 20,
+        paddingLeft: 20,
+        alignSelf: 'center',
+        backgroundColor: '#fff',
+        borderRadius: 25,
+        borderWidth: 1,
+        borderColor: '#eee',
+        elevation: 3
+    },
+    cardtitle: {
+        color: '#7B4DFA', 
+        fontSize: RFValue(16), 
+        fontWeight: '900', 
+        margin: 10
+    },
+    cardSubTitle: {
+        color: '#7B4DFA', 
+        fontSize: RFValue(13), 
+        fontWeight: '700', 
+        margin: 5
     }
 
 })

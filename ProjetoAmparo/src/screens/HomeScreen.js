@@ -1,224 +1,296 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, ScrollView, TouchableOpacity, Image} from "react-native";
-import {MaterialCommunityIcons, Feather, FontAwesome} from '@expo/vector-icons'
+import { View, Text, Button, StyleSheet, ScrollView, TouchableOpacity, Image } from "react-native";
+import { MaterialCommunityIcons, Feather, FontAwesome } from '@expo/vector-icons';
 
-import colors from "../styles/colors";
-import typography from "../styles/typography";
+import * as Linking from 'expo-linking'
+import { RFValue } from "react-native-responsive-fontsize";
 import { DrawerActions } from "@react-navigation/native";
 
-export default function HomeScreen({navigation}) {
+
+export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
 
-           <View style={styles.header}>
-             <TouchableOpacity onPress={ () => navigation.dispatch(DrawerActions.toggleDrawer())}>
-                <MaterialCommunityIcons name="menu" size={30} color='#AF28FF' />
-             </TouchableOpacity>
-            <Text style={[styles.textTitle, {marginStart: 80}]}>Projeto Amparo</Text>
-           </View>
+            <View style={styles.header}>
+                <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
+                    <MaterialCommunityIcons name="menu" size={RFValue(30)} color='#7B4DFA' />
+                </TouchableOpacity>
 
-           <Text style={styles.subTextTitle}>Principais Recursos de Emergencia</Text>
-           <Text style={styles.subTextTitle}> Disponivel 24 horas por dia</Text>
+                <Text style={styles.textTitle}>Projeto Amparo</Text>
 
-           <View style={{height: 140}}>
-              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.scrollViewContent} style={styles.carousel}>
-
-              <TouchableOpacity onPress={() => navigation.navigate('Gravar Áudio')}>
-                <View style={styles.cardView}>
-                  <MaterialCommunityIcons name="microphone" size={36} color='#fff'/>
-                  <Text style={styles.cardTextTitle}> Gravar Áudio</Text>
-                  <Text style={styles.cardTextSub}>Inicia gravação automaticamente e salva na nuvem com opção de compartilhar</Text>
-              </View>
-              </TouchableOpacity>
-
-              <TouchableOpacity onPress={ () => navigation.navigate('Contatos de Emergência')}>
-                <View style={[styles.cardView, {backgroundColor: '#FF9500'}]}>
-                  <MaterialCommunityIcons name="message-alert-outline" size={36} color='#fff'/>
-                  <Text style={styles.cardTextTitle}> Alertar Contatos</Text>
-                  <Text style={styles.cardTextSub}>Envia SMS imediato para os contatos cadastrados de emergência</Text>
-              </View>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <View style={[styles.cardView, {backgroundColor: '#FF0000'}]}>
-                  <Feather name="phone-call" size={36} color='#fff' />
-                  <Text style={styles.cardTextTitle}> Ligar 190</Text>
-                  <Text style={styles.cardTextSub}>Faz ligação direta para a Polícia Militar se o dispositivo permitir</Text>
-              </View>
-              </TouchableOpacity>
-
-               <TouchableOpacity onPress={ () => navigation.navigate('Botão de Emergência')}>
-                 <View style={[styles.cardView, {backgroundColor: '#FF0000'}]}>
-                   <MaterialCommunityIcons name="alert-decagram" size={36} color='#fff' />
-                   <Text style={styles.cardTextTitle}> Botão De Emergência</Text>
-                   <Text style={styles.cardTextSub}>Aperte caso esteja em perigo</Text>
-               </View>
-               </TouchableOpacity>
-
-              <TouchableOpacity onPress={ () => navigation.navigate('Modo Discreto')}>
-                 <View style={[styles.cardView, {backgroundColor: '#FF0000'}]}>
-                    <MaterialCommunityIcons name="calculator" size={36} color='#fff' />
-                    <Text style={styles.cardTextTitle}>Modo Discreto</Text>
-                    <Text style={styles.cardTextSub}>Para não levantar suspeitas</Text>
-                 </View>
-              </TouchableOpacity>
-              
-              </ScrollView>
-           </View>
-
-           <View style={styles.cardFrases}>
-             <Text style={{fontSize: 12, fontWeight: 'bold', color: colors.primary, textAlign: 'center'}}>
-                "Romper o silêncio é o primeiro passo para a liberdade."
-            </Text>
-           </View>
-
-           <View style={styles.cardObjetivo}>
-            <View style={styles.cardObjetivoHeader}>
-                <FontAwesome name="heart" size={22} color={colors.primary}/>
-                <Text style={{fontSize: typography.text.fontSize, color: colors.primary, fontWeight: 'bold'}}>
-                    O que é o projeto Amparo?
-                </Text>
-                <FontAwesome name="heart" size={22} color={colors.primary}/>
+                <View style={{ width: RFValue(30) }} />
             </View>
 
-             <Text style={{color: colors.primary, fontWeight: 'bold', fontSize: 13, textAlign: 'center'}}>
-                O Projeto Amparo é uma plataforma digital dedicada ao apoio integral de mulheres vítimas de violência sexual. 
-                Oferecemos suporte jurídico, psicossocial e comunitário através de recursos tecnológicos seguros e acessíveis.
-            </Text>
+            <ScrollView 
+                contentContainerStyle={styles.scrollContent}
+                showsVerticalScrollIndicator={false}>
+                <Text style={[styles.subTextTitle, {marginTop: 15}]}>Principais Recursos de Emergência</Text>
+                <Text style={[styles.subTextTitle, {marginBottom: 15}]}>Disponível 24 horas por dia</Text>
 
-            <Text style={{color: colors.primary, fontWeight: 'bold',fontSize: 13,marginTop: 10, textAlign: 'center'}}>
-                Nossa missão é proporcionar ferramentas de proteção, orientação e acolhimento, 
-                conectando mulheres em situação de vulnerabilidade com redes de apoio especializadas e recursos de emergência.
-            </Text>
+                <View style={{ minHeight: 150, maxHeight: 180 }}>
+                    <ScrollView 
+                        horizontal 
+                        showsHorizontalScrollIndicator={false}
+                        contentContainerStyle={styles.carouselContent}
+                    >
 
-            <Text style={{color: colors.primary, fontWeight: 'bold',fontSize: 13,marginTop: 10, textAlign: 'center'}}>
-                Acreditamos que toda mulher merece viver livre de violência, com dignidade e segurança. 
-                O Projeto Amparo está aqui para apoiar você em cada passo dessa jornada.
-            </Text>
-           </View>
+                        <TouchableOpacity onPress={() => navigation.navigate('Gravar Áudio')}>
+                            <View style={styles.cardView}>
+                                <MaterialCommunityIcons name="microphone" size={RFValue(36)} color='#fff' />
+                                <Text style={styles.cardTextTitle}>Gravar Áudio</Text>
+                                <Text style={styles.cardTextSub}>
+                                    Inicia gravação automaticamente e salva na nuvem com opção de compartilhar
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
 
-           <View style={styles.bottomView}>
-             <Text style={{fontSize: 16, color: '#fff', textAlign: 'center', fontWeight: 'bold'}}>
-                Siga-nos nas Redes Sociais
-             </Text>
-             <View style={styles.bottomViewRow}>
-                <Image 
-                  source={require('../images/instaicon.png')}
-                  style={{width: 25, height: 25}} />
-                <Image 
-                  source={require('../images/tiktokicon.png')} 
-                  style={{width: 25, height: 25}}/>
-             </View>
-             <Text style={styles.cardTextTitle}>@amparoofc</Text>
-           </View>
+                        <TouchableOpacity onPress={() => navigation.navigate('Contatos de Emergência')}>
+                            <View style={[styles.cardView, { backgroundColor: '#FF9500' }]}>
+                                <MaterialCommunityIcons name="message-alert-outline" size={RFValue(36)} color='#fff' />
+                                <Text style={styles.cardTextTitle}>Alertar Contatos</Text>
+                                <Text style={styles.cardTextSub}>
+                                    Envia SMS imediato para os contatos cadastrados de emergência
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => Linking.openURL(`tel:${190}`)}>
+                            <View style={[styles.cardView, { backgroundColor: '#FF3B30' }]}>
+                                <Feather name="phone-call" size={RFValue(36)} color='#fff' />
+                                <Text style={styles.cardTextTitle}>Ligar 190</Text>
+                                <Text style={styles.cardTextSub}>
+                                    Faz ligação direta para a Polícia Militar se permitido
+                                </Text>
+                            </View>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => navigation.navigate('Botão de Emergência')}>
+                            <View style={[styles.cardView, { backgroundColor: '#FF3B30' }]}>
+                                <MaterialCommunityIcons name="alert-decagram" size={RFValue(36)} color='#fff' />
+                                <Text style={styles.cardTextTitle}>Botão de Emergência</Text>
+                                <Text style={styles.cardTextSub}>Aperte caso esteja em perigo</Text>
+                            </View>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => navigation.navigate('Modo Discreto')}>
+                            <View style={[styles.cardView, { backgroundColor: '#7B4DFA' }]}>
+                                <MaterialCommunityIcons name="calculator" size={RFValue(36)} color='#fff' />
+                                <Text style={styles.cardTextTitle}>Modo Discreto</Text>
+                                <Text style={styles.cardTextSub}>Para não levantar suspeitas</Text>
+                            </View>
+                        </TouchableOpacity>
+
+                    </ScrollView>
+                </View>
+
+                <View style={styles.cardFrases}>
+                    <Text style={styles.fraseText}>
+                        "Romper o silêncio é o primeiro passo para a liberdade."
+                    </Text>
+                </View>
+
+                <View style={styles.cardObjetivo}>
+                    <View style={styles.cardObjetivoHeader}>
+                        <FontAwesome name="heart" size={RFValue(22)} color='#7B4DFA' />
+                        <Text style={styles.cardObjetivoTitle}>O que é o Projeto Amparo?</Text>
+                        <FontAwesome name="heart" size={RFValue(22)} color='#7B4DFA' />
+                    </View>
+
+                    <Text style={styles.cardObjetivoText}>
+                        O Projeto Amparo é uma plataforma digital dedicada ao apoio integral 
+                        de mulheres vítimas de violência sexual. Oferecemos suporte jurídico, 
+                        psicossocial e comunitário através de recursos tecnológicos seguros e acessíveis.
+                    </Text>
+
+                    <Text style={styles.cardObjetivoText}>
+                        Nossa missão é proporcionar ferramentas de proteção, orientação e acolhimento, 
+                        conectando mulheres em situação de vulnerabilidade com redes de apoio 
+                        especializadas e recursos de emergência.
+                    </Text>
+
+                    <Text style={styles.cardObjetivoText}>
+                        Acreditamos que toda mulher merece viver livre de violência, com dignidade 
+                        e segurança. O Projeto Amparo está aqui para apoiar você em cada passo dessa jornada.
+                    </Text>
+                </View>
+            </ScrollView>
+
+            <View style={styles.footer}>
+                <Text style={styles.footerTitle}>Siga-nos nas Redes Sociais</Text>
+
+                <View style={styles.footerRow}>
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.instagram.com/amparoofc')}>
+                        <Image source={require('../images/instaicon.png')} style={styles.footerIcon} />
+                    </TouchableOpacity>
+
+                    <Image source={require('../images/Logo.png')} style={styles.img} />
+
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.tiktok.com/@amparoofc')}>
+                        <Image source={require('../images/tiktokicon.png')} style={styles.footerIcon} />
+                    </TouchableOpacity>
+                </View>
+
+                <Text style={styles.footerTag}>@amparoofc</Text>
+            </View>
         </View>
-    )
+    );
 }
+
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
+        backgroundColor: "#FAFAFA",
     },
     header: {
-        flex: 1,
-        width: '100%',
-        height: 100,
-        paddingStart: 20,
-        marginBottom: 30,
-        backgroundColor: colors.background,
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        flexDirection: 'row',
-        borderBottomStartRadius: 50,
-        borderBottomLeftRadius: 50,
-        borderWidth: 0.3,
-        borderColor: '#000',
-        elevation: 3
+        width: "100%",
+        minHeight: 100,
+        backgroundColor: "#fff",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        paddingHorizontal: 20,
+        elevation: 3,
+        shadowColor: "#000",
+        shadowOpacity: 0.08,
+        borderBottomLeftRadius: 40,
+        shadowRadius: 4,
     },
     textTitle: {
-        fontSize: typography.title.fontSize,
-        fontWeight: typography.title.fontWeight,
-        color: colors.primary
+        fontSize: RFValue(22),
+        fontWeight: "900",
+        color: "#7B4DFA",
+    },
+    scrollContent: {
+        paddingBottom: 140,
+        alignItems: "center",
     },
     subTextTitle: {
-        fontSize: typography.subtitle.fontSize,
-        fontWeight: typography.subtitle.fontWeight,
-        color: colors.primary
+        fontSize: RFValue(18),
+        fontWeight: "900",
+        color: "#7B4DFA",
+        textAlign: "center"
     },
-    scrollViewContent: {
-        padding: 15,
-        alignItems: 'center'
-    },
-    carousel: {
-        height: 140,           // 120 (altura do card) + margens/paddings
-        alignSelf: 'stretch',
-        marginTop: 16
+    carouselContent: {
+        paddingHorizontal: 10,
+        alignItems: "center",
     },
     cardView: {
-        backgroundColor: colors.primary,
-        width: 260,
-        height: 120,
-        marginHorizontal: 10,
-        padding: 5,
-        borderRadius: 20,
-        justifyContent: 'center',
-        alignItems: 'center'
+        backgroundColor: "#7B4DFA",
+        width: RFValue(210),
+        height: RFValue(130),
+        marginHorizontal: 12,
+        padding: 12,
+        borderRadius: 12,
+        justifyContent: "center",
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOpacity: 0.1,
+        shadowRadius: 6
     },
     cardTextTitle: {
-        fontSize: typography.body.fontSize,
-        fontWeight: 'bold',
-        color: colors.background,
-        textAlign: 'center'
+        fontSize: RFValue(15),
+        fontWeight: "800",
+        color: "#fff",
+        marginTop: 5,
     },
     cardTextSub: {
-        fontSize: 12,
-        fontWeight: 'bold',
-        color: colors.background,
-        textAlign: 'center'
+        fontSize: RFValue(11),
+        color: "#F2E8FF",
+        textAlign: "center",
+        marginTop: 2,
     },
     cardFrases: {
-        width: 360,
-        height: 50,
-        justifyContent: 'center',
-        alignItems: 'center',
+        maxWidth: "90%",
+        minWidth: "80%",
+        padding: 12,
         marginTop: 20,
-        borderRadius: 20,
-        borderTopWidth: 1,
-        borderLeftWidth: 4,
-        borderEndWidth: 1,
-        borderBottomWidth: 1,
-        borderColor: colors.primary
+        borderRadius: 18,
+        backgroundColor: "#fff",
+        shadowColor: "#000",
+        shadowOpacity: 0.05,
+        shadowRadius: 3,
+        elevation: 2,
+    },
+    fraseText: {
+        fontSize: RFValue(12),
+        fontWeight: "900",
+        color: "#7B4DFA",
+        textAlign: "center",
     },
     cardObjetivo: {
-        width: 360,
-        height: 290,
+        maxWidth: "92%",
+        minWidth: "80%",
         marginTop: 20,
-        paddingTop: 10,
-        paddingStart: 7,
-        paddingEnd: 7,
-        borderRadius: 15,
-        borderWidth: 2,
-        borderColor: colors.primary
+        padding: 15,
+        borderRadius: 18,
+        backgroundColor: "#fff",
+        shadowColor: "#000",
+        shadowOpacity: 0.06,
+        shadowRadius: 5,
+        elevation: 2,
     },
     cardObjetivoHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginBottom: 10
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 10,
     },
-    bottomView: {
-        width: '100%',
-        height: 130,
-        paddingTop: 5,
-        alignItems: 'center',
-        borderTopEndRadius: 50,
-        marginTop: 50,
-        backgroundColor: colors.primary
+    cardObjetivoTitle: {
+        fontSize: RFValue(19),
+        color: "#7B4DFA",
+        fontWeight: "900",
     },
-    bottomViewRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 5
-    }
-        
-})
+    cardObjetivoText: {
+        color: "#7B4DFA",
+        fontWeight: "600",
+        fontSize: RFValue(13),
+        textAlign: "center",
+        marginTop: 10,
+    },
+    footer: {
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: 110,
+        backgroundColor: "#7B4DFA",
+        borderTopLeftRadius: 26,
+        borderTopRightRadius: 26,
+        alignItems: "center",
+        justifyContent: "center",
+        paddingBottom: 5,
+        paddingTop: 10,
+        elevation: 10,
+        shadowColor: "#000",
+        shadowOpacity: 0.15,
+        shadowRadius: 6,
+    },
+    footerTitle: {
+        fontSize: RFValue(15),
+        color: "#fff",
+        fontWeight: "800",
+        marginBottom: 5,
+    },
+    footerRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        width: 120,
+        marginBottom: 6,
+    },
+    footerIcon: {
+        width: RFValue(25),
+        height: RFValue(25),
+    },
+    footerTag: {
+        fontSize: RFValue(12),
+        color: "#fff",
+        fontWeight: "800",
+    },
+
+    img: {
+        width: 50,
+        height: 40,
+        alignSelf: "center",
+    },
+});

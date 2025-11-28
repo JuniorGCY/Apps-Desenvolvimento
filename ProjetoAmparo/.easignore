@@ -1,0 +1,15 @@
+# Ignorar dependencias
+node_modules/
+
+# Ignorar builds locais e caches do Android
+android/app/build/
+android/app/release/
+android/.gradle/
+.gradle/
+
+# Ignorar configurações locais
+android/local.properties
+*/local.properties
+
+# Ignorar iOS
+ios/Pods/
