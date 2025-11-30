@@ -9,7 +9,7 @@ import * as Print from 'expo-print'
 import { shareAsync } from "expo-sharing";
 import * as FileSystem from 'expo-file-system'
 
-import CheckBox from "@react-native-community/checkbox";
+import CheckBox from "expo-checkbox";
 import { DrawerActions } from "@react-navigation/native";
 
 export default function ManualDeFuga({navigation}) {
@@ -83,7 +83,6 @@ export default function ManualDeFuga({navigation}) {
             .filter(key => selectedOptions2[key])
             .map(key => `<li>${labels[key]}</li>`)
             .join("");
-
 
         try {
             const html = `
@@ -255,9 +254,11 @@ export default function ManualDeFuga({navigation}) {
                         <View key={index} style={styles.checkBox}>
                             <CheckBox 
                               value={selectedOptions[key]}
-                              onValueChange={ () => handleToggle(key)}
-                              tintColors={{true: '#4CAF50', false: '#000'}}/>
-                            <Text style={{fontWeight: '500'}}>{labels[key]}</Text>
+                              onValueChange={ (newValue) => setSelectedOptions((prev) => ({
+                                ...prev, [key]: newValue
+                              }))}
+                              color={selectedOptions[key] ? '#4CAF50' : '#444'}/>
+                            <Text style={{fontWeight: '500', marginStart: 5}}>{labels[key]}</Text>
                         </View>
                     ))}
 
@@ -273,9 +274,11 @@ export default function ManualDeFuga({navigation}) {
                         <View key={index} style={styles.checkBox}>
                             <CheckBox 
                               value={selectedOptions2[key]}
-                              onValueChange={ () => handleToggle2(key)}
-                              tintColors={{true: '#4CAF50', false: '#000'}}/>
-                            <Text style={{fontWeight: '500'}}>{labels[key]}</Text>
+                              onValueChange={ (newValue) => setSelectedOptions2((prev) => ({
+                                ...prev, [key]: newValue
+                              }))}
+                              color={selectedOptions2[key] ? '#4CAF50' : '#444'}/>
+                            <Text style={{fontWeight: '500', marginStart: 5}}>{labels[key]}</Text>
                         </View>
                     ))}
 

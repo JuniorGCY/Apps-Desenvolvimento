@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: '#7B4DFA', 
         borderRadius: 6,
-        flexWrap: 1
+        flexWrap: 'wrap'
     },
     card2: {
         maxWidth: '100%',

@@ -16,12 +16,12 @@ Criar um espaço seguro e acessível para que mulheres possam:
 
 ## 🚀 Funcionalidades (todas em progresso)
 
-- 📚 **Informações e direitos**: orientações sobre leis, tipos de violência e canais de denúncia  
+- 📚 **Informações e direitos**: orientações sobre leis, tipos de violência e canais de denúncia  (finalizada)
 - 🧭 **Mapa de delegacias próximas** usando geolocalização  
 - 📞 **Contatos de emergência** com envio automático de **mensagem e localização**  
-- 🎙️ **Gravação de áudio de emergência**  
-- 📝 **Criação de plano de fuga personalizado**  
-- 📄 **Geração de relatório em PDF**  
+- 🎙️ **Gravação de áudio de emergência**  (Finalizada, implementar upload para storage do Firebase)
+- 📝 **Criação de plano de fuga personalizado e geração de relatório em PDF** (Finalizada)
+- 🤖 **ChatIA para tirar dúvidas** (Finalizada, em testes)
 - 🔐 **Interface discreta** e com foco em **segurança e privacidade**
 
 ## 🧩 Tecnologias usadas
@@ -34,7 +34,7 @@ Criar um espaço seguro e acessível para que mulheres possam:
 Esta versão foi criada com **EAS Build (Dev Client)** — não depende do Expo Go.  
 Você pode instalar o APK direto no Android após extrair:
 
-[📥 **Baixar APK (EAS Build)**](https://expo.dev/artifacts/eas/cbqbz5XnT4HACrVJuBaG6B.tar.gz)
+[📥 **Baixar APK (EAS Build)**](https://expo.dev/artifacts/eas/3QKJh8NzkFSnUaeE5L5DuK.apk)
 
 > Compatível com Android **7.0 (Nougat)** ou superior. 
 > Versão: *Preview – em desenvolvimento.*
@@ -43,7 +43,7 @@ Você pode instalar o APK direto no Android após extrair:
 
 | Tela Inicial | Chat Jurídico | Apoio Psicológico |
 |---------------|--------------------|--------------------------|
-| ![Tela Inicial](./screenshots/home.jpg) | ![Direitos](./screenshots/chatjuridico.jpg) | ![Emergência](./screenshots/apoiopsicologico.jpg) |
+| ![Tela Inicial](./screenshots/home.png) | ![Direitos](./screenshots/chatjuridico.png) | ![Emergência](./screenshots/apoiopsicologico.png) |
 
  [**Acompanhe a iniciativa Amparo**](https://linktr.ee/amparoofc?fbclid=PAZXh0bgNhZW0CMTEAAacRpK_nTAC1_9dZA5MQNfFDPutoSjCGjNwSjlbeKW5mkeIFCtjFOXTwSscjhw_aem_C_V0zv7Um-dMZcCxR9CZDw)
 
