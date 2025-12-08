@@ -67,7 +67,7 @@ export default function BotaoPanico({navigation}) {
                             </View>
                         </TouchableOpacity>
 
-                        <Text style={{textAlign: 'center', marginTop: 10, fontSize: RFValue(11), fontWeight: '500'}}>
+                        <Text style={{textAlign: 'center', marginTop: 10, fontSize: RFValue(11), fontWeight: '500', color: '#222'}}>
                             Você terá 5 segundos para cancelar se pressionou por engano.
                         </Text>
                     </View>
@@ -77,7 +77,7 @@ export default function BotaoPanico({navigation}) {
                             Contatos de Emergência
                         </Text>
 
-                        <Text style={{fontSize: RFValue(11), textAlign: 'center', fontWeight: '500'}}>
+                        <Text style={{fontSize: RFValue(11), textAlign: 'center', fontWeight: '500', color: '#222'}}>
                             Configure seus contatos para receber alertas automaticos
                         </Text>
 
@@ -95,7 +95,7 @@ export default function BotaoPanico({navigation}) {
                             Teste do Sistema
                         </Text>
 
-                        <Text style={{fontSize: RFValue(11), textAlign: 'center', fontWeight: '500'}}>
+                        <Text style={{fontSize: RFValue(11), textAlign: 'center', fontWeight: '500', color: '#222'}}>
                             Teste as funcionalidades sem ativar a emergência real
                         </Text>
 

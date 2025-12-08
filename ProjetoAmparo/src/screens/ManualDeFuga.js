@@ -258,7 +258,7 @@ export default function ManualDeFuga({navigation}) {
                                 ...prev, [key]: newValue
                               }))}
                               color={selectedOptions[key] ? '#4CAF50' : '#444'}/>
-                            <Text style={{fontWeight: '500', marginStart: 5}}>{labels[key]}</Text>
+                            <Text style={{fontWeight: '600', marginStart: 5, color: '#222'}}>{labels[key]}</Text>
                         </View>
                     ))}
 
@@ -278,7 +278,7 @@ export default function ManualDeFuga({navigation}) {
                                 ...prev, [key]: newValue
                               }))}
                               color={selectedOptions2[key] ? '#4CAF50' : '#444'}/>
-                            <Text style={{fontWeight: '500', marginStart: 5}}>{labels[key]}</Text>
+                            <Text style={{fontWeight: '600', marginStart: 5, color: '#222'}}>{labels[key]}</Text>
                         </View>
                     ))}
 
@@ -403,6 +403,7 @@ const styles = StyleSheet.create({
     textCard: {
         fontSize: RFValue(12),
         fontWeight: '600',
+        color: '#222',
         marginTop: 10,
         marginBottom: 5
     },

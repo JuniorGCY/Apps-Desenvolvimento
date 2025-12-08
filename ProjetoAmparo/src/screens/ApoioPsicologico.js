@@ -68,7 +68,7 @@ export default function ApoioPsicoloico({navigation}) {
                         <Text style={styles.cardTextSuporte}>24 horas</Text>
                     </View>
                     
-                    <Text style={{fontWeight: '500', fontSize: RFValue(14), marginBottom: 10}}>Serviços oferecidos:</Text>
+                    <Text style={{fontWeight: '500', fontSize: RFValue(14), marginBottom: 10, color: '#222'}}>Serviços oferecidos:</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
@@ -93,38 +93,38 @@ export default function ApoioPsicoloico({navigation}) {
                         <Text style={{fontWeight: '500', color: '#FF0000', marginStart: 10}}>Ligar para agendar</Text>
                     </View>
                     </ScrollView>
-                </View>
+                </View>             
                 
                 <View style={styles.cardSuporteProfissional}>
                     <ScrollView nestedScrollEnabled={true} >
-                    <Text style={{fontWeight: '500', fontSize: 16, marginTop: 5}}>Terapia Online - Zenklub</Text>
-                    <Text style={{fontWeight: '400', fontSize: 16, marginTop: 5, marginBottom: 10}}>Plataforma de terapia online com psicólogos certificados.</Text>
+                    <Text style={styles.cardTitleSuporte}>Terapia Online - Zenklub</Text>
+                    <Text style={styles.cardSubtitleSuporte}>Plataforma de terapia online com psicólogos certificados.</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="location-exit" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 5}}>Online: App Zenklub</Text>
+                        <Text style={styles.cardTextSuporte}>Online: App Zenklub</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="clock-alert-outline" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Conforme agendamento</Text>
+                        <Text style={styles.cardTextSuporte}>Conforme agendamento</Text>
                     </View>
                     
-                    <Text style={{fontWeight: '400', fontSize: 16, marginBottom: 10}}>Serviços oferecidos:</Text>
+                    <Text style={{fontWeight: '500', fontSize: 16, marginBottom: 10, color: '#222'}}>Serviços oferecidos:</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Sessões individuais</Text>
+                        <Text style={styles.cardTextSuporte}>Sessões individuais</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Psicologia/Psicanálise/Terapia/Nutrição</Text>
+                        <Text style={styles.cardTextSuporte}>Psicologia/Psicanálise/Terapia/Nutrição</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Atendimento online</Text>
+                        <Text style={styles.cardTextSuporte}>Atendimento online</Text>
                     </View>
                     
                     <Text style={{backgroundColor: '#5fff59ff', color: '#000', fontWeight: '400', width: 140}}>Atendimento Pago</Text>
@@ -139,39 +139,39 @@ export default function ApoioPsicoloico({navigation}) {
 
                 <View style={styles.cardSuporteProfissional}>
                     <ScrollView nestedScrollEnabled={true} >
-                    <Text style={{fontWeight: '500', fontSize: 16, marginTop: 5}}>Núcleo de Psicologia da Universidade</Text>
-                    <Text style={{fontWeight: '400', fontSize: 16, marginTop: 5, marginBottom: 10}}>Serviço de psicologia comunitária com foco em situações de violência e trauma.</Text>
+                    <Text style={styles.cardTitleSuporte}>Núcleo de Psicologia da Universidade</Text>
+                    <Text style={styles.cardSubtitleSuporte}>Serviço de psicologia comunitária com foco em situações de violência e trauma.</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="location-exit" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 5}}>Rua das Flores, 500 - São Paulo/SP</Text>
+                        <Text style={styles.cardTextSuporte}>Rua das Flores, 500 - São Paulo/SP</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="phone" size={20} color='#252525ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 5}}>(11) 2222-3333</Text>
+                        <Text style={styles.cardTextSuporte}>(11) 2222-3333</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="clock-alert-outline" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Segunda a sexta, 9h às 17h</Text>
+                        <Text style={styles.cardTextSuporte}>Segunda a sexta, 9h às 17h</Text>
                     </View>
                     
-                    <Text style={{fontWeight: '400', fontSize: 16, marginBottom: 10}}>Serviços oferecidos:</Text>
+                    <Text style={{fontWeight: '500', fontSize: 16, marginBottom: 10, color: '#222'}}>Serviços oferecidos:</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Atendimento psicológico gratuito</Text>
+                        <Text style={styles.cardTextSuporte}>Atendimento psicológico gratuito</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Orientação familiar</Text>
+                        <Text style={styles.cardTextSuporte}>Orientação familiar</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Grupos terapêuticos</Text>
+                        <Text style={styles.cardTextSuporte}>Grupos terapêuticos</Text>
                     </View>
                     
                     <Text style={{backgroundColor: '#5fff59ff', color: '#000', fontWeight: '400', width: 140}}>Atendimento Gratuito</Text>
@@ -186,39 +186,39 @@ export default function ApoioPsicoloico({navigation}) {
 
                 <View style={styles.cardSuporteProfissional}>
                     <ScrollView nestedScrollEnabled={true} >
-                    <Text style={{fontWeight: '500', fontSize: 16, marginTop: 5}}>Casa da Mulher Brasileira</Text>
-                    <Text style={{fontWeight: '400', fontSize: 16, marginTop: 5, marginBottom: 10}}>Atendimento psicológico especializado para mulheres em situação de violência.</Text>
+                    <Text style={styles.cardTitleSuporte}>Casa da Mulher Brasileira</Text>
+                    <Text style={styles.cardSubtitleSuporte}>Atendimento psicológico especializado para mulheres em situação de violência.</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="location-exit" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 5}}>Capitais e grandes cidades</Text>
+                        <Text style={styles.cardTextSuporte}>Capitais e grandes cidades</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="phone" size={20} color='#252525ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 5}}>Presencial: 180</Text>
+                        <Text style={styles.cardTextSuporte}>Presencial: 180</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="clock-alert-outline" size={20} color='#000'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>24 horas</Text>
+                        <Text style={styles.cardTextSuporte}>24 horas</Text>
                     </View>
                     
-                    <Text style={{fontWeight: '400', fontSize: 16, marginBottom: 10}}>Serviços oferecidos:</Text>
+                    <Text style={{fontWeight: '500', fontSize: 16, marginBottom: 10, color: '#222'}}>Serviços oferecidos:</Text>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Atendimento psicológico gratuito</Text>
+                        <Text style={styles.cardTextSuporte}>Atendimento psicológico gratuito</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Orientação familiar</Text>
+                        <Text style={styles.cardTextSuporte}>Orientação familiar</Text>
                     </View>
 
                     <View style={{flexDirection: 'row'}}>
                         <MaterialCommunityIcons name="check-circle-outline" size={20} color='#00ff15ff'/>
-                        <Text style={{marginStart: 10, marginBottom: 10}}>Grupos terapêuticos</Text>
+                        <Text style={styles.cardTextSuporte}>Grupos terapêuticos</Text>
                     </View>
                     
                     <Text style={{backgroundColor: '#5fff59ff', color: '#000', fontWeight: '400', width: 140}}>Atendimento Gratuito</Text>
@@ -240,11 +240,11 @@ export default function ApoioPsicoloico({navigation}) {
                 <TouchableOpacity onPress={ () => handleModal('Content1')}>
                     <View style={styles.cardLite}>
                     <Text style={{color: '#7B4DFA', fontWeight: '800', fontSize: RFValue(10)}}>Respiração para Redução de Ansiedade</Text>
-                    <Text style={{fontSize: RFValue(9)}}>Exercícios de Respiração profunda para acalmar o sistema nervoso em mom...</Text>
+                    <Text style={{fontSize: RFValue(9), color: '#222', fontWeight: 500}}>Exercícios de Respiração profunda para acalmar o sistema nervoso em mom...</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 10}}>
                         <MaterialCommunityIcons name="clock" size={RFValue(16)} color='#000'/>
-                        <Text style={{marginStart: 10, fontSize: RFValue(11), fontWeight: '400'}}>5 Minutos</Text>
+                        <Text style={{marginStart: 10, fontSize: RFValue(11), color: '#222', fontWeight: 500}}>5 Minutos</Text>
                     </View>
                 </View>
                 </TouchableOpacity>
@@ -254,11 +254,11 @@ export default function ApoioPsicoloico({navigation}) {
                 <TouchableOpacity onPress={ () => handleModal('Content2')}>
                     <View style={styles.cardLite}>
                     <Text style={{color: '#7B4DFA', fontWeight: '800', fontSize: RFValue(10)}}>Escaneamento Corporal para Redução de Estresse</Text>
-                    <Text style={{fontSize: RFValue(9)}}>Técnica de atenção plena para reconectar com o corpo e reduzir tensões...</Text>
+                    <Text style={{fontSize: RFValue(9), color: '#222', fontWeight: 500}}>Técnica de atenção plena para reconectar com o corpo e reduzir tensões...</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 10}}>
                         <MaterialCommunityIcons name="clock" size={RFValue(16)} color='#000'/>
-                        <Text style={{marginStart: 10, fontSize: RFValue(11), fontWeight: '400'}}>10-15 Minutos</Text>
+                        <Text style={{marginStart: 10, fontSize: RFValue(11), color: '#222', fontWeight: 500}}>10-15 Minutos</Text>
                     </View>
                 </View>
                 </TouchableOpacity>
@@ -268,11 +268,11 @@ export default function ApoioPsicoloico({navigation}) {
                 <TouchableOpacity onPress={() => handleModal('Content3')}>
                     <View style={styles.cardLite}>
                     <Text style={{color: '#7B4DFA', fontWeight: '800', fontSize: RFValue(10)}}>Diário de Gratidão</Text>
-                    <Text style={{fontSize: RFValue(9)}}>Prática de registro diário para reconhecer aspectos positivos mesmo em...</Text>
+                    <Text style={{fontSize: RFValue(9), color: '#222', fontWeight: 500}}>Prática de registro diário para reconhecer aspectos positivos mesmo em...</Text>
 
                     <View style={{flexDirection: 'row', marginTop: 10}}>
                         <MaterialCommunityIcons name="clock" size={RFValue(16)} color='#000'/>
-                        <Text style={{marginStart: 10, fontSize: RFValue(11), fontWeight: '400'}}>5 Minutos</Text>
+                        <Text style={{marginStart: 10, fontSize: RFValue(11), color: '#222', fontWeight: 500}}>5 Minutos</Text>
                     </View>
                 </View>
                 </TouchableOpacity>
@@ -361,17 +361,20 @@ const styles = StyleSheet.create({
     },
     cardTitleSuporte: {
         fontWeight: '500', 
+        color: '#222',
         fontSize: RFValue(13), 
         marginTop: 5
     },
     cardSubtitleSuporte: {
         fontWeight: '400', 
+        color: '#222',
         fontSize: RFValue(12), 
         marginTop: 5, 
         marginBottom: 10
     },
     cardTextSuporte: {
         fontSize: RFValue(10),
+        color: '#222',
         marginStart: 10, 
         marginBottom: 5
     },

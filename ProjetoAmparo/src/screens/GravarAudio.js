@@ -156,7 +156,7 @@ export default function GravarAudio({navigation}) {
                                 Histórico de Gravações
                             </Text>
                             <Text style={{color: '#fff', fontSize: RFValue(12), fontWeight: '700', textAlign: 'center'}}>
-                                Suas gravações são salvas automaticamente com data, hora e localização
+                                Suas gravações são salvas automaticamente com data hora e localização
                             </Text>
                         </View>
 
@@ -181,8 +181,8 @@ export default function GravarAudio({navigation}) {
                                     }}
                                 >
                                     <Text style={{ fontWeight: 'bold', color: '#7B4DFA' }}>Áudio #{item.id}</Text>
-                                    <Text>Duração: {item.duration.toFixed(1)}s</Text>
-                                    <Text>Data: {new Date(item.created_at).toLocaleString()}</Text>
+                                    <Text style={{color: '#222'}}>Duração: {item.duration.toFixed(1)}s</Text>
+                                    <Text style={{color: '#222'}}>Data: {new Date(item.created_at).toLocaleString()}</Text>
                                 </View>
                                 ))
                             )}
@@ -259,7 +259,6 @@ const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: '#7B4DFA', 
         borderRadius: 6,
-        flexWrap: 'wrap'
     },
     card2: {
         maxWidth: '100%',

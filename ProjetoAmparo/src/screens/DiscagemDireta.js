@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
   },
   callSubtitle: {
     fontSize: RFValue(13),
-    color: "#666",
+    color: "#222",
   },
   callButton: {
     marginTop: 15,

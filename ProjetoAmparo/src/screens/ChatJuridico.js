@@ -30,30 +30,36 @@ export default function ChatJuridico({ navigation }) {
 
   async function handleSendMessage() {
     if (!userInput.trim()) return;
-
+  
     const userMsg = {
       id: Date.now().toString(),
       from: "user",
       text: userInput,
       time: new Date().toLocaleTimeString().slice(0, 5),
     };
-
+  
     setMessages(prev => [...prev, userMsg]);
     setUserInput("");
     setLoading(true);
-
-    const aiReply = await sendMessageToBackend(userMsg.text);
-
+  
+    const history = [...messages].map(msg => ({
+      role: msg.from === "user" ? "user" : "assistant",
+      content: msg.text,
+    }));
+  
+    const aiReply = await sendMessageToBackend(userMsg.text, history);
+  
     const botMsg = {
       id: Date.now().toString(),
       from: "ia",
       text: aiReply || "Não consigo entender. Pode reformular?",
       time: new Date().toLocaleTimeString().slice(0, 5),
     };
-
+  
     setMessages(prev => [...prev, botMsg]);
     setLoading(false);
   }
+  
 
   return (
     <View style={styles.screen}> 

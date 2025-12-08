@@ -1,22 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { useColorScheme } from "react-native";
+import { NavigationContainer, DarkTheme as NavigationDarkTheme, DefaultTheme as NavigationLightTheme } from "@react-navigation/native";
+import { 
+  Provider as PaperProvider, 
+  MD3DarkTheme as PaperDarkTheme, 
+  MD3LightTheme as PaperLightTheme 
+} from "react-native-paper";
 
-import AppEntry from './src/navigation/AppEntry';
-import {NavigationContainer} from '@react-navigation/native'
+import AppEntry from "./src/navigation/AppEntry";
 
 export default function App() {
-  return (
-    <NavigationContainer>
-       <AppEntry />
-    </NavigationContainer>
-  )
-}
+  const scheme = useColorScheme();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  const paperTheme = scheme === "dark" ? PaperDarkTheme : PaperLightTheme;
+
+  const navigationBaseTheme = scheme === "dark" ? NavigationDarkTheme : NavigationLightTheme;
+
+  const navigationTheme = {
+    ...navigationBaseTheme,
+    colors: {
+      ...navigationBaseTheme.colors,
+      ...paperTheme.colors,
+      text: paperTheme.colors.onSurface,
+      card: paperTheme.colors.surface, 
+    },
+  };
+
+  return (
+    <PaperProvider theme={paperTheme}>
+      <NavigationContainer theme={navigationTheme}>
+        <AppEntry />
+      </NavigationContainer>
+    </PaperProvider>
+  );
+}
